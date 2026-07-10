@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Blossom Corner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌸 Blossom Corner 🌸</h1>
+    <p>Fresh Flowers for Every Occasion</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+</nav>
+
+<div class="lr">
+
+    <h2>Register</h2>
+
+    <div class="lrp">
+        <input type="text"
+               id="username"
+               placeholder="Username"
+               required>
+    </div>
+
+    <div class="lrp">
+        <input type="email"
+               id="email"
+               placeholder="Email"
+               required>
+    </div>
+
+    <div class="lrp">
+        <input type="tel"
+               id="phone"
+               placeholder="Phone Number"
+               required>
+    </div>
+
+    <div class="lrp">
+        <input type="password"
+               id="password"
+               placeholder="Password"
+               required>
+    </div>
+
+    <div class="lrp">
+        <input type="password"
+               id="confirmPassword"
+               placeholder="Confirm Password"
+               required>
+    </div>
+
+    <div class="lrp">
+        <button type="button" onclick="register()">
+            Register
+        </button>
+    </div>
+
+    <p>
+        Have an account?
+        <a href="login.html">Login</a>
+    </p>
+
+</div>
+
+<footer>
+    <p>© 2026 Blossom Corner | All Rights Reserved</p>
+</footer>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

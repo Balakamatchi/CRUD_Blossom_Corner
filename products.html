@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Blossom Corner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+
+let user=JSON.parse(localStorage.getItem("loggedInUser"));
+
+if(!user){
+
+alert("Please Login First");
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+<header>
+
+<h1>🌸 Blossom Corner 🌸</h1>
+
+<p>Fresh Flowers For Every Occasion</p>
+
+</header>
+
+<nav>
+
+<a href="home.html">Home</a>
+
+<a href="products.html">Products</a>
+
+<a href="cart.html">Cart</a>
+
+<a href="orders.html">Orders</a>
+
+<a href="about.html">About</a>
+
+<a href="contacts.html">Contact</a>
+
+<a href="#" onclick="logout()">Logout</a>
+
+</nav>
+
+<section id="p">
+
+<p
+style="font-size:30px;
+font-weight:bold;
+color:#ff0080;">
+
+Explore Our Floral Collection
+
+</p>
+
+</section>
+
+<section class="flower-container" id="flowers">
+
+</section>
+
+<footer>
+    <p>© 2026 Blossom Corner | All Rights Reserved</p>
+</footer>
+
+
+<script src="js/data.js"></script>
+<script src="js/products.js"></script>
+<script src="js/auth.js"></script>
+
+<script>
+displayCustomerFlowers();
+</script>

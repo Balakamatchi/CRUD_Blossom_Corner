@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Blossom Corner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+let user = JSON.parse(localStorage.getItem("loggedInUser"));
+if(!user){
+    alert("Please Login First");
+    window.location.href="login.html";
+}
+</script>
+
+<header>
+
+<h1>🌸 Blossom Corner 🌸</h1>
+
+<p>Fresh Flowers For Every Occasion</p>
+
+</header>
+
+<nav>
+
+<a href="home.html">Home</a>
+
+<a href="products.html">Products</a>
+
+<a href="cart.html">Cart</a>
+
+<a href="orders.html">Orders</a>
+
+<a href="about.html">About</a>
+
+<a href="contacts.html">Contact</a>
+
+<a href="#" onclick="logout()">Logout</a>
+
+</nav>
+
+<section id="p">
+
+<h2
+style="color:#ff0080;text-align:center;">
+
+🛒 Your Shopping Cart 🛒
+
+</h2>
+
+</section>
+
+<section
+class="flower-container"
+id="cartItems">
+
+</section>
+
+<div
+style="text-align:center;margin:0px 100px 50px 100px;">
+
+<h2 style="color:#97044d;;">
+
+Total : ₹<span id="totalPrice">0</span>
+
+</h2>
+
+<br>
+
+<button onclick="buyProducts()" class="buynow">
+
+Buy Now
+
+</button>
+
+
+<br>
+
+</div>
+
+<footer>
+    <p>© 2026 Blossom Corner | All Rights Reserved</p>
+</footer>
+
+<script src="js/auth.js"></script>
+
+<script src="js/cart.js"></script>
+
+<script>
+
+displayCart();
+
+</script>
+
+</body>
+</html>

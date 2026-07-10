@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Blossom Corner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌸 Blossom Corner 🌸</h1>
+    <p>Fresh Flowers for Every Occasion</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+</nav>
+
+<div class="lr">
+
+    <h2>Login</h2>
+
+    <div class="lrp">
+        <input type="text"
+               id="loginUsername"
+               placeholder="Username"
+               required>
+    </div>
+
+    <div class="lrp">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Password"
+               required>
+    </div>
+
+    <div class="lrp">
+        <button type="button" onclick="login()">
+            Login
+        </button>
+    </div>
+
+    <p>
+        Don't have an account?
+        <a href="register.html">Register</a>
+    </p>
+
+</div>
+
+<footer>
+    <p>© 2026 Blossom Corner | All Rights Reserved</p>
+</footer>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

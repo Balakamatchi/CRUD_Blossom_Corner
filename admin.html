@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Blossom Corner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+let user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if (!user || user.role !== "admin") {
+
+    alert("Access Denied!");
+
+    window.location.href = "login.html";
+
+}
+</script>
+
+<header>
+    <h1>🌸 Blossom Corner - Admin Panel 🌸</h1>
+    <p>Flower Management System</p>
+</header>
+
+<nav>
+    <a href="admin.html">Dashboard</a>
+    <a href="deliver.html">Orders</a>
+    <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<section id="p">
+
+<div id="uaf">
+    <div class="ua">
+
+    <h2>Update Flower</h2>
+    <br>
+
+
+    <input
+    type="text"
+    id="updateFlowerName"
+    placeholder="Flower Name">
+
+    <br><br>
+
+    <input
+    type="number"
+    id="updateFlowerPrice"
+    placeholder="Price">
+
+    <br><br>
+
+    <input
+    type="text"
+    id="updateFlowerImage"
+    placeholder="Image Path (Example: Image/Rose.jpg)">
+
+    <br><br>
+
+
+    <button onclick="updateFlower()">Update Flower</button>
+
+    </div>
+
+
+    <div class="ua">
+    <h2>Add Flower</h2>
+
+    <br>
+
+    <input
+    type="text"
+    id="addFlowerName"
+    placeholder="Flower Name">
+
+    <br><br>
+
+    <input
+    type="number"
+    id="addFlowerPrice"
+    placeholder="Price">
+
+    <br><br>
+
+    <input
+    type="text"
+    id="addFlowerImage"
+    placeholder="Image Path (Example: Image/Rose.jpg)">
+
+    <br><br>
+
+
+    <button onclick="addFlower()">Add Flower</button>
+
+    </div>
+
+</div>
+</section>
+
+<section class="flower-container" id="flowers"> </section>
+
+
+<footer>
+    <p>© 2026 Blossom Corner | All Rights Reserved</p>
+</footer>
+
+
+<script src="js/data.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/auth.js"></script>
+
+<script>displayFlowers();</script>
+
+</body>
+</html>
